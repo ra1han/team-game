@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+.balloon-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.balloon {
+  width: 50px;
+  height: 70px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -100px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.balloon1 {
+  left: -50px;
+  background-color: #ff6b6b;
+  animation-delay: 0s;
+}
+
+.balloon2 {
+  left: 0;
+  background-color: #ffcc5c;
+  animation-delay: 1s;
+}
+
+.balloon3 {
+  left: 50px;
+  background-color: #88d8b0;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
